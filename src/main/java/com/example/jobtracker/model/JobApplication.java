@@ -1,10 +1,8 @@
 package com.example.jobtracker.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.springframework.cglib.core.Local;
+
 
 import java.time.LocalDate;
 
@@ -19,11 +17,14 @@ public class JobApplication {
     private String status;
     private LocalDate appliedDate;
     private String notes;
+    private String emailId;
 
     // Constructors
     public JobApplication(){
 
     }
+
+
 
     //Getters and Setters
     public Long getId(){
@@ -70,7 +71,11 @@ public class JobApplication {
         return notes;
     }
 
-    public void setNotes(){
+    public void setNotes(String notes){
         this.notes = notes;
     }
+
+    public String getEmailId(){return emailId;}
+
+    public void setEmailId(String emailId){this.emailId = emailId;}
 }

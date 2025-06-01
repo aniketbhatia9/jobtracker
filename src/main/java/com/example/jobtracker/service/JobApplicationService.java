@@ -31,4 +31,6 @@ public class JobApplicationService {
         repository.deleteById(id);
     }
 
+    public List<JobApplication> findByEmailId(String emailId) {return repository.findByEmailId(emailId);}
+
 }
